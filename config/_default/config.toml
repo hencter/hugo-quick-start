@@ -1,0 +1,70 @@
+# URL #
+# === # 
+baseURL = 'http://example.org/' # 主机名（带路径）的根目录，这里一般为你的域名或者子域名
+uglyURLs = false # 启用的话 URL 将会由 /slug/ 转为 /slug.thml
+# canonifyURLs = false # 将那个相对 URL 转成绝对
+# disableAliases = false # 禁用别名
+# disablePathToLower = false # 路径禁止转换为小写
+# relativeURLs = false # 启用此选项以使所有相对 URL 都相对于内容根目录。 请注意，这不会影响绝对 URL。 
+# refLinksErrorLevel = 'ERROR' # 使用时 ref或者 relref解析页面链接并且链接无法解析，它将使用此日志级别记录。 有效值为 ERROR（默认）或 WARNING. 任何 ERROR将失败构建（ exit -1). 
+# refLinksNotFoundURL = 
+removePathAccents = true # 删除 非间距标记 和 预组字符 `content/` 路径中 
+  # 非间距标记：https://www.compart.com/en/unicode/category/Mn
+  # 预组字符：https://zh.wikipedia.org/wiki/%E9%A2%84%E7%BB%84%E5%AD%97%E7%AC%A6
+
+# 站点相关信息 #
+title = 'Test Site' # 站点标题
+# titleCaseStyle = 'AP' # 标题样式
+  # 放 titleCaseStyle指定 标题 模板功能使用的标题样式和 Hugo 中的自动章节标题。
+  # 默认为 AP Stylebook ，但您也可以将其设置为 Chicago或者 Go（每个单词都以大写字母开头）。 
+copyright = '' # 网站的版权声明，一般放在 `<footer>`
+googleAnalytics = "" # 谷歌分析跟踪 ID
+
+# 语言相关 #
+# ======== #
+languageCode = 'zh' # 语言定义标签
+  # 参考：https://datatracker.ietf.org/doc/html/rfc5646
+  # RSS 模板：https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/_default/rss.xml
+  # 别名模板：https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/alias.html
+defaultContentlanguage = 'zh'
+defaultContentLanguageInSubdir = true # 在子目录中渲染默认的内容语言，例如 content/en/
+hasCJKLanguage = true # 默认：false，是（ture）否（false）包含 CJK 语言，
+  # 此设置作用用于 `.Summary` 和 `.WordCount` 的统计
+
+# 内容相关 #
+# ======== #
+enableEmoji = true # 为页面开启表情符号支持，速查表：https://www.webpagefx.com/tools/emoji-cheat-sheet/
+enableGitInfo = true # 为每个页面启用 .GitInfo 对象（如果你的站点是使用 Git 进行版本控制的）。这将会 更新内容文件的 `Lastmod` 参数值别为该文件的最新 git commit 日期。
+enableInlineShortcodes = true # 行内简码
+enableMissingTranslationPlaceholders = false # 如果缺少翻译，则显示占位符而不是默认值或空字符串。 
+enableRobotsTXT = true # 启用生成 robots.txt文件。  
+# newContentEditor = '' # 创建新内容时使用的编辑器
+noChmod = true # 不同步文件的权限模式。 
+# noTimes = false # 不同步文件的修改时间
+paginate = 3 # 每页的默认元素数量 分页 。 
+paginatePath = 'p' # 分页期间使用的路径元素（https://example.com/page/2）
+# pluralizeListTitles = true # 将列表中的标题复数。 
+
+# 生成&发布 #
+# ==== #
+debug = false
+publishDir = 'public' # Hugo 将写入最终静态站点（HTML 文件等）的目录。 
+rssLimit = -1 # -1：无限，RSS 概要中的最大项目数。 
+# sectionPagesMenu = 'main' # 此配置突出一个「懒」字，开启此配置，他会将直接将你的 section/ 目录识别为一个菜单项
+timeout = '30s' # 生成页面内容的超时时间，指定为 持续时间 或以毫秒为单位。 注意： 这用于避免递归内容生成。 如果您的页面生成速度很慢（例如，因为它们需要大图像处理或依赖于远程内容），您可能需要提高此限制。 
+# timeZone = 'Aisa/Shanghai' # 时区（或位置），例如 Europe/Oslo, 用于在没有此类信息的情况下解析前事日期，并且在 time功能 。 有效值列表可能取决于系统，但应包括 UTC, Local中的任何位置 IANA 时区数据库 。 
+watch = false # 观察文件变化，并根据需要重新创建
+
+# 主题相关 #
+# ======== #
+# theme = [''] # 设置主题
+# themesDir = "themes" # 主题存放目录
+
+# 技巧 #
+# ==== #
+# 类 *nix 机器上开发站点时，下面的命令可以帮助你查看配置项默认值
+# 
+# ```shell
+# # ~/Site/your-hugo-site
+# hugo config | grep emoji
+# ```
